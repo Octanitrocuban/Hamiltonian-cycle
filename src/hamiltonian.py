@@ -158,48 +158,6 @@ def tree_square_mesh(n, m):
 	arbre = np.array(arbre, dtype=object)
 	return arbre
 
-def tree_mesh_unit(dots):
-	"""
-	Function to construct the nodes mesh tree.
-
-	Parameters
-	----------
-	dots : numpy.ndarray
-		Array listing the position of the dots.
-
-	Returns
-	-------
-	arbre : numpy.ndarray
-		A 2d array listing the indices of the connected dots. The shape is
-		(N, 2) where N is the number of connections. For a connexion between
-		two dots it is indicate by : ([indice of the first dot, indice of
-		the second dot]).
-
-	Example
-	-------
-	In [0] : tree_mesh_unit(grid_dots(6, 6))
-	Out [0]: np.array([[0, 1], [0, 6], [1, 2], [1, 7], [2, 3], [2, 8],
-					   [3, 4], [3, 9], [4, 5], [4, 10], [5, 11], [6, 7],
-					   [6, 12], [7, 8], [7, 13], [8, 9], [8, 14], [9, 10],
-					   [9, 15], [10, 11], [10, 16], [11, 17], [12, 13],
-					   [12, 18], [13, 14], [13, 19], [14, 15], [14, 20],
-					   [15, 16], [15, 21], [16, 17], [16, 22], [17, 23],
-					   [18, 19], [18, 24], [19, 20], [19, 25], [20, 21],
-					   [20, 26], [21, 22], [21, 27], [22, 23], [22, 28],
-					   [23, 29], [24, 25], [24, 30], [25, 26], [25, 31],
-					   [26, 27], [26, 32], [27, 28], [27, 33], [28, 29],
-					   [28, 34], [29, 35], [30, 31], [31, 32], [32, 33],
-					   [33, 34], [34, 35]])
-
-	"""
-	# compute the distance matrix
-	distances = cdist(dots, dots)
-	# where the value is ~1 but not 0
-	masque = (distances <= 1)&(distances > 0)
-	arbre = np.argwhere(masque)
-	arbre = np.unique(np.sort(arbre, axis=1), axis=0)
-	return arbre
-
 def derand_centres(minimal_tree, dots):
 	"""
 	Function to construct the nodes mesh position.
