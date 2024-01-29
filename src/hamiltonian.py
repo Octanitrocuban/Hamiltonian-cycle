@@ -160,7 +160,7 @@ def tree_square_mesh(n, m):
 
 def derand_centres(minimal_tree, dots):
 	"""
-	Function to construct the nodes mesh position.
+	Function to interpolate the nodes positions that will be used as wall.
 
 	Parameters
 	----------
@@ -214,7 +214,8 @@ def derand_centres(minimal_tree, dots):
 
 def tree_nodes_centers(nodes, centers):
 	"""
-	Function to construct the nodes mesh position.
+	Function to construct the connection tree between the nodes that are from the cycle and
+	the nodes that are from the walls.
 
 	Parameters
 	----------
@@ -262,7 +263,8 @@ def tree_nodes_centers(nodes, centers):
 
 def make_path(n_lines, n_columns, centres, raveled_nodes):
 	"""
-	Function to construct the nodes mesh position.
+	Function to construct the random hamiltonian cycle from the constructed walls.
+	It use the 'right hand method' which usually serves yo solve maze. 
 
 	Parameters
 	----------
