@@ -48,7 +48,7 @@ A 101 by 100 deterministic cycle.
 ![Exemple picture](img/determinist_101_100.png)
 
 ### Statistics
-As we can see on the two following histograms, the deterministic algorithm is much faster than the random one. This come from the fact that the first algorithm have only one step to create the cycle and use only one loop. On the contrary the second algorithm have at least nine step with four heavy loop. Also as we can see on the third plot the time consumption of some steps or really heavy. The two heaviest steps are: first the construction of the cycle with th 'right hand' method and secondly the construction of the minimum spaning tree through the kurskal algorithm.
+As we can see on the two following histograms, the deterministic algorithm is much faster than the random one. This come from the fact that the first algorithm have only one step to create the cycle and use only one loop. On the contrary the second algorithm have at least nine step with four heavy loop. Also as we can see on the third plot the time consumption of some steps or really heavy. The two heaviest steps are: first the construction of the cycle with the 'right hand' method and secondly the construction of the minimum spaning tree through the kurskal algorithm.
 
 ![Exemple picture](img/time_conso_pdf_determ_101_100_runs_100000.png)
 ![Exemple picture](img/time_conso_pdf_random_100_100_runs_1000.png)
